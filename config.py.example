@@ -1,0 +1,24 @@
+# config.py — Copy this file and fill in your values
+import os
+
+class Config:
+    SECRET_KEY        = os.environ.get('SECRET_KEY', 'your-secret-key-here')
+    DB_HOST           = os.environ.get('DB_HOST', 'localhost')
+    DB_USER           = os.environ.get('DB_USER', 'root')
+    DB_PASSWORD       = os.environ.get('DB_PASSWORD', '')
+    DB_NAME           = os.environ.get('DB_NAME', 'jobportal_db')
+    UPLOAD_FOLDER     = 'app/static/uploads'
+    MAX_CONTENT_LENGTH= 5 * 1024 * 1024   # 5 MB
+    ALLOWED_EXTENSIONS= {'pdf', 'doc', 'docx'}
+
+class DevelopmentConfig(Config):
+    DEBUG = True
+
+class ProductionConfig(Config):
+    DEBUG = False
+
+config = {
+    'development': DevelopmentConfig,
+    'production':  ProductionConfig,
+    'default':     DevelopmentConfig,
+}
