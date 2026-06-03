@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Home - Job Portal{% endblock %}
+{% block content %}
+<div class="text-center py-5 bg-light rounded-3 mb-4">
+  <h1 class="display-5 fw-bold">Find Your Dream Job</h1>
+  <p class="lead text-muted">Thousands of jobs. One simple search.</p>
+  <form action="/seeker/jobs" method="GET" class="row g-2 justify-content-center mt-3">
+    <div class="col-md-4">
+      <input name="q" class="form-control form-control-lg" placeholder="Job title or keyword">
+    </div>
+    <div class="col-md-3">
+      <input name="location" class="form-control form-control-lg" placeholder="Location">
+    </div>
+    <div class="col-auto">
+      <button class="btn btn-primary btn-lg px-4">
+        <i class="fas fa-search me-2"></i>Search
+      </button>
+    </div>
+  </form>
+</div>
+<div class="row text-center">
+  <div class="col-md-4">
+    <div class="card border-0 shadow-sm p-4">
+      <i class="fas fa-user-tie fa-3x text-primary mb-3"></i>
+      <h5>For Job Seekers</h5>
+      <p class="text-muted">Browse thousands of listings, apply in one click.</p>
+      <a href="/register" class="btn btn-outline-primary">Get Started</a>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card border-0 shadow-sm p-4">
+      <i class="fas fa-building fa-3x text-success mb-3"></i>
+      <h5>For Employers</h5>
+      <p class="text-muted">Post jobs and manage applicants easily.</p>
+      <a href="/register" class="btn btn-outline-success">Post a Job</a>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card border-0 shadow-sm p-4">
+      <i class="fas fa-chart-line fa-3x text-warning mb-3"></i>
+      <h5>Track Applications</h5>
+      <p class="text-muted">Monitor your application status in real time.</p>
+      <a href="/login" class="btn btn-outline-warning">Login</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
