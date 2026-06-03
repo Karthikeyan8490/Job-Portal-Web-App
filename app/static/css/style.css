@@ -1,0 +1,7 @@
+body { background-color: #f8f9fa; }
+.navbar { box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+.card { transition: transform .2s ease, box-shadow .2s ease; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+.badge-pending    { background-color: #ffc107; color: #000; }
+.badge-shortlisted{ background-color: #198754; }
+.badge-rejected   { background-color: #dc3545; }
